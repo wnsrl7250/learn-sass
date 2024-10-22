@@ -1,9 +1,8 @@
-@use "./utils.scss";
-@use "./likelion.scss";
+@use "./techit";
 
 .wrapper {
   border: 1px solid red;
-  @include utils.size(100px, 100px);
-  margin: utils.$spacing-1;
-  padding: likelion.$spacing-2;
+  @include techit.utils-size(200px, 150px);
+  margin: techit.$lion-spacing-1;
+  padding: techit.$utils-spacing-2;
 }
