@@ -1,0 +1,37 @@
+@mixin resetList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+// 100px의 가로 크기를 가지는 믹스인
+@mixin width($width) {
+  width: $width;
+  inline-size: $width;
+}
+@mixin flexbox(
+  $direction,
+  $justify: null,
+  $align: null,
+  $wrap: null,
+  $content: null
+) {
+  display: flex;
+  // flex-direction: $direction;
+  // flex-wrap: $wrap;
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  align-content: $content;
+}
+div {
+  @include flexbox(column);
+}
+ul {
+  background-color: yellow;
+  @include resetList;
+}
+ol {
+  font-size: 1.25rem;
+  @include resetList;
+  @include width(200px);
+}
