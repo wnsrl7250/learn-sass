@@ -1,0 +1,22 @@
+@mixin size($width, $height: null, $rounded: null) {
+  width: $width;
+  @if $height != null {
+    height: $height;
+  } @else {
+    height: $width;
+  }
+  @if $rounded == sm {
+    border-radius: 2px;
+  } @else if $rounded == md {
+    border-radius: 4px;
+  } @else if $rounded == lg {
+    border-radius: 6px;
+  } @else if $rounded == xl {
+    border-radius: 8px;
+  } @else {
+    @warn "#{$rounded} 키워드는 유효하지 않습니다.";
+  }
+}
+.box {
+  @include size(100px, $rounded: xxl);
+}
