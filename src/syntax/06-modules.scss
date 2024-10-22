@@ -1,0 +1,9 @@
+@use "./utils.scss";
+@use "./likelion.scss";
+
+.wrapper {
+  border: 1px solid red;
+  @include utils.size(100px, 100px);
+  margin: utils.$spacing-1;
+  padding: likelion.$spacing-2;
+}
